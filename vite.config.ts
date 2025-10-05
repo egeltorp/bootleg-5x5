@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
-  base: "/",
+  base: "/bootleg-5x5/",
   server: {
     host: "::",
     port: 8080,
