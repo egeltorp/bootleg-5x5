@@ -48,7 +48,7 @@ export const PlateCalculator = () => {
 
         <div className="space-y-3">
           <p className="text-sm text-muted-foreground">
-            Bar: {BAR_WEIGHT} kg | Per side: {((totalWeight - BAR_WEIGHT) / 2).toFixed(1)} kg
+            Bar: {BAR_WEIGHT} kg | Per side: {((totalWeight - BAR_WEIGHT) / 2).toFixed(2)} kg
           </p>
 
           {plates.length > 0 ? (
