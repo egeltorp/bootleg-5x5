@@ -76,12 +76,12 @@ export default function History() {
 
       <main className="max-w-2xl mx-auto px-4 py-6">
         <Tabs defaultValue="history" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="history">
+        <TabsList className="grid w-full grid-cols-2 h-12">
+            <TabsTrigger value="history" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <Calendar className="h-4 w-4 mr-2" />
               History
             </TabsTrigger>
-            <TabsTrigger value="progress">
+            <TabsTrigger value="progress" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <TrendingUp className="h-4 w-4 mr-2" />
               Progress
             </TabsTrigger>

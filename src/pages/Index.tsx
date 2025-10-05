@@ -15,8 +15,16 @@ export default function Index() {
 
   useEffect(() => {
     // Check dark mode preference
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      setIsDark(true);
+    }
+
 
     // Calculate next workout
     const lastWorkout = getLastWorkout();
@@ -42,7 +50,7 @@ export default function Index() {
         <div className="max-w-2xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Dumbbell className="h-6 w-6 text-primary" />
-            <h1 className="text-xl font-bold">StrongLifts 5×5</h1>
+            <h1 className="text-xl font-bold">Bootleg 5×5</h1>
           </div>
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
